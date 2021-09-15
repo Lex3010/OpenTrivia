@@ -14,13 +14,14 @@ import com.google.gson.JsonParser;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200/trivia")
+@CrossOrigin(origins = "http://localhost:4200/rest/trivia")
 public class TriviaController {
 
-  @GetMapping("/trivia")
+  @GetMapping("/rest/trivia")
   public String getTrivia() throws IOException {
     URL url;
     StringBuffer response;
@@ -49,6 +50,11 @@ public class TriviaController {
 
     return triviaJson;
   }
+
+  // @PostMapping("/rest/checkanswer")
+  // public String checkAnswer() throws IOException {
+
+  // }
 
   private Trivia createTrivia(String response) {
 
