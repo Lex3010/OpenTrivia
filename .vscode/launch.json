@@ -12,7 +12,7 @@
       "projectName": "OpenTrivia"
     },
     {
-      "type": "firefox",
+      "type": "chrome",
       "request": "launch",
       "reAttach": true,
       "name": "Launch localhost",
@@ -28,7 +28,7 @@
       "pathMappings": [
         {
           "url": "webpack:///src",
-          "path": "${workspaceFolder}/angularClient/src"
+          "path": "${workspaceFolder}/OpenTrivia/src"
         }
       ]
     }

@@ -22,6 +22,9 @@ public class Trivia {
   @Expose
   private String[] incorrectAnswers;
 
+  @Expose
+  private String[] answers;
+
   public Trivia() {
   }
 
@@ -33,6 +36,14 @@ public class Trivia {
     this.question = question;
     this.correctAnswer = correctAnswer;
     this.incorrectAnswers = incorrectAnswers;
+  }
+
+  public Trivia(String category, String type, String difficulty, String question, String[] answers) {
+    this.category = category;
+    this.type = type;
+    this.difficulty = difficulty;
+    this.question = question;
+    this.answers = answers;
   }
 
   public String getCategory() {
@@ -81,5 +92,13 @@ public class Trivia {
 
   public void setIncorrectAnswer(String[] incorrectAnswers) {
     this.incorrectAnswers = incorrectAnswers;
+  }
+
+  public String[] getAnswers() {
+    return incorrectAnswers;
+  }
+
+  public void setAnswers(String[] answers) {
+    this.answers = answers;
   }
 }
